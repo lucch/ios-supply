@@ -20,9 +20,39 @@
 		F03F7C452628D8FD00E85E8E /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C442628D8FD00E85E8E /* ViewCodable.swift */; };
 		F03F7C4A2628DA8F00E85E8E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C492628DA8F00E85E8E /* View.swift */; };
 		F03F7C4F2628DBB100E85E8E /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C4E2628DBB100E85E8E /* Controller.swift */; };
-		F03F7C582628E34000E85E8E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C572628E34000E85E8E /* LoginViewModel.swift */; };
 		F03F7C5C2628E36600E85E8E /* LoginPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C5B2628E36600E85E8E /* LoginPasswordViewModel.swift */; };
+		F04132EB2629FA560085705C /* LoginEmailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04132EA2629FA560085705C /* LoginEmailCoordinator.swift */; };
+		F04132EE262CAAB70085705C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04132ED262CAAB70085705C /* Coordinator.swift */; };
+		F04132F6262CAF840085705C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04132F5262CAF840085705C /* LoginViewModel.swift */; };
+		F04132FA262CB2D40085705C /* LoginPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04132F9262CB2D40085705C /* LoginPasswordCoordinator.swift */; };
+		F04132FF262CB30E0085705C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04132FE262CB30E0085705C /* AppCoordinator.swift */; };
+		F0413310262D20300085705C /* ItemListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041330F262D20300085705C /* ItemListCoordinator.swift */; };
+		F0413314262D20800085705C /* ItemListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0413313262D20800085705C /* ItemListController.swift */; };
+		F0413318262D20BA0085705C /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0413317262D20BA0085705C /* ItemListView.swift */; };
+		F041331B262D22660085705C /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041331A262D22660085705C /* ItemListViewModel.swift */; };
+		F0413344262E09ED0085705C /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0413343262E09ED0085705C /* ItemCell.swift */; };
+		F08F06CE262E1C9200BD18AF /* ItemListControllerRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08F06CD262E1C9200BD18AF /* ItemListControllerRx.swift */; };
+		F08F06D2262E1CB900BD18AF /* ItemListViewModelRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08F06D1262E1CB900BD18AF /* ItemListViewModelRx.swift */; };
+		F08F06D7262E220500BD18AF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F08F06D6262E220500BD18AF /* RxSwift */; };
+		F08F06DB262E220500BD18AF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F08F06DA262E220500BD18AF /* RxRelay */; };
+		F08F06DD262E220500BD18AF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F08F06DC262E220500BD18AF /* RxCocoa */; };
+		F08F06DF262E220500BD18AF /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F08F06DE262E220500BD18AF /* RxBlocking */; };
+		F0CB48BC262E50B600AF9141 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB48BB262E50B600AF9141 /* Types.swift */; };
+		F0CB48BE262E8A5800AF9141 /* ItemAddControllerRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB48BD262E8A5800AF9141 /* ItemAddControllerRx.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F0CB48B7262E258B00AF9141 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F03F7BF52628C41400E85E8E /* ios-supply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-supply.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,8 +67,22 @@
 		F03F7C442628D8FD00E85E8E /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		F03F7C492628DA8F00E85E8E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		F03F7C4E2628DBB100E85E8E /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
-		F03F7C572628E34000E85E8E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F03F7C5B2628E36600E85E8E /* LoginPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordViewModel.swift; sourceTree = "<group>"; };
+		F04132EA2629FA560085705C /* LoginEmailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailCoordinator.swift; sourceTree = "<group>"; };
+		F04132ED262CAAB70085705C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F04132F5262CAF840085705C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F04132F9262CB2D40085705C /* LoginPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordCoordinator.swift; sourceTree = "<group>"; };
+		F04132FE262CB30E0085705C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F041330F262D20300085705C /* ItemListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCoordinator.swift; sourceTree = "<group>"; };
+		F0413313262D20800085705C /* ItemListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListController.swift; sourceTree = "<group>"; };
+		F0413317262D20BA0085705C /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		F041331A262D22660085705C /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		F0413343262E09ED0085705C /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		F08F06CD262E1C9200BD18AF /* ItemListControllerRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListControllerRx.swift; sourceTree = "<group>"; };
+		F08F06D1262E1CB900BD18AF /* ItemListViewModelRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModelRx.swift; sourceTree = "<group>"; };
+		F0CB48B4262E258B00AF9141 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F0CB48BB262E50B600AF9141 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		F0CB48BD262E8A5800AF9141 /* ItemAddControllerRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAddControllerRx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +90,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08F06DB262E220500BD18AF /* RxRelay in Frameworks */,
 				F03F7C252628C6D400E85E8E /* SnapKit in Frameworks */,
+				F08F06DD262E220500BD18AF /* RxCocoa in Frameworks */,
 				F03F7C212628C63E00E85E8E /* RxMoya in Frameworks */,
+				F08F06DF262E220500BD18AF /* RxBlocking in Frameworks */,
+				F08F06D7262E220500BD18AF /* RxSwift in Frameworks */,
 				F03F7C1F2628C63E00E85E8E /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +108,7 @@
 			children = (
 				F03F7BF72628C41400E85E8E /* ios-supply */,
 				F03F7BF62628C41400E85E8E /* Products */,
+				F0CB48B3262E258B00AF9141 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,10 +123,12 @@
 		F03F7BF72628C41400E85E8E /* ios-supply */ = {
 			isa = PBXGroup;
 			children = (
-				F03F7C3D2628D88C00E85E8E /* Views */,
-				F03F7C2E2628CC1E00E85E8E /* Controllers */,
-				F03F7C352628D53500E85E8E /* View Models */,
+				F041330E262D20030085705C /* Supply */,
+				F08F06CB262E1C6300BD18AF /* Supply Rx */,
+				F03F7C9D2629C88F00E85E8E /* Login */,
 				F03F7C2A2628C71A00E85E8E /* Network */,
+				F03F7C9B2629C83A00E85E8E /* Common */,
+				F04132FE262CB30E0085705C /* AppCoordinator.swift */,
 				F03F7BF82628C41400E85E8E /* AppDelegate.swift */,
 				F03F7C012628C41500E85E8E /* Assets.xcassets */,
 				F03F7C032628C41500E85E8E /* LaunchScreen.storyboard */,
@@ -94,49 +145,140 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		F03F7C2E2628CC1E00E85E8E /* Controllers */ = {
+		F03F7C9B2629C83A00E85E8E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F04132ED262CAAB70085705C /* Coordinator.swift */,
+				F03F7C442628D8FD00E85E8E /* ViewCodable.swift */,
+				F03F7C492628DA8F00E85E8E /* View.swift */,
 				F03F7C4E2628DBB100E85E8E /* Controller.swift */,
-				F03F7C2F2628CC3700E85E8E /* LoginController.swift */,
+				F0CB48BB262E50B600AF9141 /* Types.swift */,
 			);
-			path = Controllers;
+			path = Common;
 			sourceTree = "<group>";
 		};
-		F03F7C352628D53500E85E8E /* View Models */ = {
+		F03F7C9D2629C88F00E85E8E /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				F03F7C562628E30800E85E8E /* Protocols */,
+				F04132E92629FA460085705C /* Coordinators */,
+				F03F7CA02629C8EA00E85E8E /* Controllers */,
+				F03F7C9F2629C8CC00E85E8E /* View Models */,
+				F03F7C9E2629C8BD00E85E8E /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F03F7C9E2629C8BD00E85E8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F03F7C412628D8CE00E85E8E /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F03F7C9F2629C8CC00E85E8E /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				F04132F5262CAF840085705C /* LoginViewModel.swift */,
 				F03F7C362628D55700E85E8E /* LoginEmailViewModel.swift */,
 				F03F7C5B2628E36600E85E8E /* LoginPasswordViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		F03F7C3D2628D88C00E85E8E /* Views */ = {
+		F03F7CA02629C8EA00E85E8E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F03F7C472628D92800E85E8E /* Protocols */,
-				F03F7C412628D8CE00E85E8E /* LoginView.swift */,
+				F03F7C2F2628CC3700E85E8E /* LoginController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F04132E92629FA460085705C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F04132EA2629FA560085705C /* LoginEmailCoordinator.swift */,
+				F04132F9262CB2D40085705C /* LoginPasswordCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F041330E262D20030085705C /* Supply */ = {
+			isa = PBXGroup;
+			children = (
+				F0413342262E09DB0085705C /* Views */,
+				F0413348262E0A3B0085705C /* View Models */,
+				F08F06C8262E0AE000BD18AF /* Controllers */,
+				F0413346262E0A1F0085705C /* Coordinators */,
+			);
+			path = Supply;
+			sourceTree = "<group>";
+		};
+		F0413342262E09DB0085705C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F0413343262E09ED0085705C /* ItemCell.swift */,
+				F0413317262D20BA0085705C /* ItemListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F03F7C472628D92800E85E8E /* Protocols */ = {
+		F0413346262E0A1F0085705C /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				F03F7C442628D8FD00E85E8E /* ViewCodable.swift */,
-				F03F7C492628DA8F00E85E8E /* View.swift */,
+				F041330F262D20300085705C /* ItemListCoordinator.swift */,
 			);
-			path = Protocols;
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		F03F7C562628E30800E85E8E /* Protocols */ = {
+		F0413348262E0A3B0085705C /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				F03F7C572628E34000E85E8E /* LoginViewModel.swift */,
+				F041331A262D22660085705C /* ItemListViewModel.swift */,
 			);
-			path = Protocols;
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		F08F06C8262E0AE000BD18AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0413313262D20800085705C /* ItemListController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F08F06CB262E1C6300BD18AF /* Supply Rx */ = {
+			isa = PBXGroup;
+			children = (
+				F08F06D0262E1CA900BD18AF /* View Models */,
+				F08F06CC262E1C7700BD18AF /* Controllers */,
+			);
+			path = "Supply Rx";
+			sourceTree = "<group>";
+		};
+		F08F06CC262E1C7700BD18AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F08F06CD262E1C9200BD18AF /* ItemListControllerRx.swift */,
+				F0CB48BD262E8A5800AF9141 /* ItemAddControllerRx.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F08F06D0262E1CA900BD18AF /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				F08F06D1262E1CB900BD18AF /* ItemListViewModelRx.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		F0CB48B3262E258B00AF9141 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB48B4262E258B00AF9141 /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +291,7 @@
 				F03F7BF12628C41400E85E8E /* Sources */,
 				F03F7BF22628C41400E85E8E /* Frameworks */,
 				F03F7BF32628C41400E85E8E /* Resources */,
+				F0CB48B7262E258B00AF9141 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +302,10 @@
 				F03F7C1E2628C63E00E85E8E /* Moya */,
 				F03F7C202628C63E00E85E8E /* RxMoya */,
 				F03F7C242628C6D400E85E8E /* SnapKit */,
+				F08F06D6262E220500BD18AF /* RxSwift */,
+				F08F06DA262E220500BD18AF /* RxRelay */,
+				F08F06DC262E220500BD18AF /* RxCocoa */,
+				F08F06DE262E220500BD18AF /* RxBlocking */,
 			);
 			productName = "ios-supply";
 			productReference = F03F7BF52628C41400E85E8E /* ios-supply.app */;
@@ -190,6 +337,7 @@
 			packageReferences = (
 				F03F7C1D2628C63E00E85E8E /* XCRemoteSwiftPackageReference "Moya" */,
 				F03F7C232628C6D400E85E8E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F08F06D5262E220500BD18AF /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = F03F7BF62628C41400E85E8E /* Products */;
 			projectDirPath = "";
@@ -217,16 +365,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04132EE262CAAB70085705C /* Coordinator.swift in Sources */,
+				F0413318262D20BA0085705C /* ItemListView.swift in Sources */,
+				F08F06CE262E1C9200BD18AF /* ItemListControllerRx.swift in Sources */,
 				F03F7C4A2628DA8F00E85E8E /* View.swift in Sources */,
+				F0413314262D20800085705C /* ItemListController.swift in Sources */,
 				F03F7C422628D8CE00E85E8E /* LoginView.swift in Sources */,
+				F041331B262D22660085705C /* ItemListViewModel.swift in Sources */,
+				F0413344262E09ED0085705C /* ItemCell.swift in Sources */,
 				F03F7C302628CC3700E85E8E /* LoginController.swift in Sources */,
+				F0CB48BC262E50B600AF9141 /* Types.swift in Sources */,
 				F03F7C4F2628DBB100E85E8E /* Controller.swift in Sources */,
+				F04132EB2629FA560085705C /* LoginEmailCoordinator.swift in Sources */,
+				F0CB48BE262E8A5800AF9141 /* ItemAddControllerRx.swift in Sources */,
+				F04132FF262CB30E0085705C /* AppCoordinator.swift in Sources */,
 				F03F7C372628D55700E85E8E /* LoginEmailViewModel.swift in Sources */,
+				F0413310262D20300085705C /* ItemListCoordinator.swift in Sources */,
 				F03F7C282628C70F00E85E8E /* NetworkManager.swift in Sources */,
+				F04132F6262CAF840085705C /* LoginViewModel.swift in Sources */,
 				F03F7C452628D8FD00E85E8E /* ViewCodable.swift in Sources */,
+				F04132FA262CB2D40085705C /* LoginPasswordCoordinator.swift in Sources */,
 				F03F7C5C2628E36600E85E8E /* LoginPasswordViewModel.swift in Sources */,
 				F03F7BF92628C41400E85E8E /* AppDelegate.swift in Sources */,
-				F03F7C582628E34000E85E8E /* LoginViewModel.swift in Sources */,
+				F08F06D2262E1CB900BD18AF /* ItemListViewModelRx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +599,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		F08F06D5262E220500BD18AF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -455,6 +624,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F03F7C232628C6D400E85E8E /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		F08F06D6262E220500BD18AF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F08F06D5262E220500BD18AF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		F08F06DA262E220500BD18AF /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F08F06D5262E220500BD18AF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		F08F06DC262E220500BD18AF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F08F06D5262E220500BD18AF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F08F06DE262E220500BD18AF /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F08F06D5262E220500BD18AF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

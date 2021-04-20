@@ -14,6 +14,8 @@ protocol ViewCodable {
 
   func setUpConstraints()
 
+  func performAdditionalConfiguration()
+
 }
 
 

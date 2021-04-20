@@ -10,7 +10,7 @@ import UIKit
 
 class Controller<ViewType: View, ViewModelType>: UIViewController {
 
-  private let viewModel: ViewModelType!
+  let viewModel: ViewModelType!
 
   var customView: ViewType {
       guard let customView = view as? ViewType else {
