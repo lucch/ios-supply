@@ -18,8 +18,7 @@ This section outlines the key aspects of each component in the proposed architec
 * `UIView`s should be created and configured separately from the `UIViewController`:
   * View code is encouraged, but XIBs and Storyboards (without segues) are accepted.
 * `UIViewController`s has two main responsibilities: managing view lifecycle and setting up bindings between its view and view model:
-  * Traditionally, callback closures or delegates have been used for communication between view controllers and view models.
-  * This proposal brings [RxSwift](https://github.com/ReactiveX/RxSwift) to the mix.
+  * Traditionally, callback closures or delegates have been used for communication between view controllers and view models. This proposal brings [RxSwift](https://github.com/ReactiveX/RxSwift) to the mix.
 * `UIViewController`s hold strong references to their views and view models.
 
 ### View Models
