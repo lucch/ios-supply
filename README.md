@@ -14,8 +14,9 @@ This section outlines the key aspects of each component in the proposed architec
 ### Views
 
 * Only layer allowed to `import UIKit`.
-* Main objects are usually `UIView`s `UIViewController`s.
-* `UIView`s are created and configured in a separate class (view code is encouraged), decoupled from `UIViewController`.
+* Main objects are usually `UIView`s and `UIViewController`s.
+* `UIView`s should be created and configured separately from the `UIViewController`:
+  * View code is encouraged, but XIBs and Storyboards (without segues) are accepted.
 * `UIViewController`s has two main responsibilities: managing view lifecycle and setting up bindings between its view and view model:
   * Traditionally, callback closures or delegates have been used for communication between view controllers and view models.
   * This proposal brings [RxSwift](https://github.com/ReactiveX/RxSwift) to the mix.
