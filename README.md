@@ -1,6 +1,11 @@
 # [WIP] Architecture Proposal
 
-This repository contains sample code implementing an MVVM-based architecture targetting projects that support iOS 12+.
+Sample code of an MVVM-based architecture targetting projects required to support iOS 12+.
+
+## Overview
+
+![mvvm-diagram](https://user-images.githubusercontent.com/2234780/115744888-581b2680-a369-11eb-9bbe-c0f5abf533d3.png)
+Image source: https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52
 
 ## Layers
 
@@ -43,6 +48,10 @@ This section outlines the key aspects of each component in the proposed architec
 * TBD
 
 ### Network
+
+* TBD
+
+### Testing
 
 * TBD
 
