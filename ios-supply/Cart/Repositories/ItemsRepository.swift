@@ -21,16 +21,8 @@ final class ItemsRepository: Repository {
     ].shuffled()
   }
 
-  // Moya + RxSwift
-//  itemsAPI
-//     .request( .listItems ) // 1.
-//     .mapArray( type: [Item].self, keyPath: "items" ) // 2.
-//     .subscribe( onNext: { articles in
-       // 3. Do something with the `items`.
-//     })
-
   deinit {
     print("👻 deinit \(Self.self)")
   }
-  
+
 }

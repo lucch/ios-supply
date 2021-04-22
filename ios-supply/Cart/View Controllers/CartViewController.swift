@@ -77,7 +77,9 @@ final class CartViewController: ViewController<CartView, CartViewModel> {
 
     let checkoutButton = customView.checkoutButton.rx
     checkoutButton.tap
-      .subscribe(onNext: viewModel.editItem)
+      .subscribe(onNext: {
+        print("🎉 Yaay!!")
+      })
       .disposed(by: disposeBag)
   }
 
