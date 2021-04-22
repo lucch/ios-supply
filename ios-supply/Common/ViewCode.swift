@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol ViewCodable {
+protocol ViewCode {
 
   func setUpViewHierarchy()
 
@@ -19,7 +19,10 @@ protocol ViewCodable {
 }
 
 
-extension ViewCodable where Self: UIView {
+typealias View = UIView & ViewCode
+
+
+extension ViewCode where Self: UIView {
 
   func render() {
     // Reset view's background color.

@@ -8,7 +8,7 @@
 import UIKit
 
 
-final class CartView: View {
+final class CartView: UIView {
 
   static let itemCellReuseIdentifier = String(describing: ItemCell.self)
 
@@ -34,14 +34,14 @@ final class CartView: View {
   let priceLabel: UILabel = {
     let label = UILabel()
     label.textColor = .white
-    label.font = .systemFont(ofSize: 18)
+    label.font = UIFont(name: "Menlo Bold", size: 16)
     label.numberOfLines = 0
     return label
   }()
 
   let checkoutButton: UIButton = {
     let button = UIButton()
-    button.setTitle("Continue", for: .normal)
+    button.setTitle("Checkout", for: .normal)
     button.setTitleColor(.white, for: .normal)
     button.titleLabel?.font = .boldSystemFont(ofSize: 18)
     button.backgroundColor = .black
@@ -49,6 +49,10 @@ final class CartView: View {
     button.contentEdgeInsets = UIEdgeInsets(top: 12.0, left: 16.0, bottom: 12.0, right: 16.0)
     return button
   }()
+
+}
+
+extension CartView: ViewCode {
 
   func setUpViewHierarchy() {
     addSubview(itemsTableView)

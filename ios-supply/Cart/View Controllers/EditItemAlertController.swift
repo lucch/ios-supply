@@ -14,19 +14,22 @@ final class EditItemAlertController {
 
   private init() {}
 
-  static func make(itemName: String, onDone completion: @escaping (Int?) -> Void) -> UIAlertController {
-    let alertController = UIAlertController(title: "Proceed to checkout?", message: "Some random message.", preferredStyle: .alert)
+  static func make(item: ItemViewModel, onDone completion: @escaping (Int?) -> Void) -> UIAlertController {
+    let alertController = UIAlertController(title: "Edit \(item.name)",
+                                            message: "How many items would you like?",
+                                            preferredStyle: .alert)
 
     alertController.addTextField { textField in
-      textField.placeholder = "Enter new quantity for \(itemName)."
+      textField.text = "\(item.quantity)"
+      textField.placeholder = "Enter new quantity for \(item.name)."
       textField.clearButtonMode = .whileEditing
-      textField.keyboardType = .numbersAndPunctuation
+      textField.keyboardType = .numberPad
     }
 
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
     let doneAction = UIAlertAction(title: "Done", style: .default) { _ in
       if let textField = alertController.textFields?[0],
-         let intString = textField.text{
+         let intString = textField.text {
         completion(Int(intString))
       } else {
         completion(nil)
@@ -37,6 +40,10 @@ final class EditItemAlertController {
     alertController.addAction(cancelAction)
 
     return alertController
+  }
+
+  deinit {
+    print("👻 deinit \(Self.self)")
   }
 
 }

@@ -19,16 +19,18 @@ final class CartCoordinator: Coordinator {
   }
 
   func start() {
-    let vm = CartViewModel()
-    vm.coordinator = self
-    vm.repository = ItemsRepository()
-    let vc = CartController(viewModel: vm)
+    let vm = CartViewModel(coordinator: self, repository: ItemsRepository())
+    let vc = CartViewController(viewModel: vm)
     navigationController.pushViewController(vc, animated: false)
   }
 
-  func edit(item: ItemViewModel) {
-//    let vc = ItemEditController(viewModel: item)
-//    navigationController.present(vc, animated: true)
+  func edit(item: ItemViewModel, completion: @escaping  (Int?) -> Void) {
+    let alertController = EditItemAlertController.make(item: item, onDone: completion)
+    navigationController.present(alertController, animated: true, completion: nil)
+  }
+
+  deinit {
+    print("👻 deinit \(Self.self)")
   }
   
 }

@@ -12,11 +12,11 @@ import RxCocoa
 
 final class CartViewModel {
 
-  weak var coordinator: CartCoordinator?
+  private let coordinator: CartCoordinator?
 
-  var repository: ItemsRepository?
+  private let repository: ItemsRepository?
 
-  let screenTitle = "Odeko Cafe"
+  let screenTitle = "Odeko Café"
 
   let items = BehaviorSubject<[ItemViewModel]>(value: [])
 
@@ -30,7 +30,9 @@ final class CartViewModel {
 
   private let disposeBag = DisposeBag()
 
-  init() {
+  init(coordinator: CartCoordinator? = nil, repository: ItemsRepository? = nil) {
+    self.coordinator = coordinator
+    self.repository = repository
     setUpBindings()
   }
 
@@ -63,16 +65,26 @@ final class CartViewModel {
   }
 
   func editItem() {
-//    if let index = selectedItemIndex.value,
-//       let item = try? items.value()[index] {
-//      coordinator?.editItem()
-//    }
+    guard let index = selectedItemIndex.value,
+          let item = try? items.value()[index] else {
+      return
+    }
+
+    coordinator?.edit(item: item) { quantity in
+      if let quantity = quantity {
+        self.updateQuantity(to: quantity, forItemAt: index)
+      }
+    }
   }
 
   func updateQuantity(to quantity: Int, forItemAt index: Int) {
     guard 0..<model.value.count ~= index else { return }
     model.value[index].quantity = quantity
     model.accept(model.value)
+  }
+
+  deinit {
+    print("👻 deinit \(Self.self)")
   }
 
 }

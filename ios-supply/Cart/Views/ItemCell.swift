@@ -11,27 +11,17 @@ import RxCocoa
 import SnapKit
 
 
-final class ItemCell: UITableViewCell, ViewCodable {
+final class ItemCell: UITableViewCell {
 
   private var disposeBag = DisposeBag()
 
   let itemQuantityLabel: UILabel = {
     let label = UILabel()
     label.numberOfLines = 0
-    label.textAlignment = .center
-    label.font = UIFont.boldSystemFont(ofSize: 22)
+    label.textAlignment = .right
+    label.font = UIFont.boldSystemFont(ofSize: 20)
     return label
   }()
-
-  let itemQuantityStepper: UIStepper = {
-    let stepper = UIStepper()
-    stepper.minimumValue = 1
-    stepper.maximumValue = 10
-    stepper.value = 9
-    return stepper
-  }()
-
-  let itemQuantityContainerView = UIView()
 
   let itemNameLabel: UILabel = {
     let label = UILabel()
@@ -41,7 +31,7 @@ final class ItemCell: UITableViewCell, ViewCodable {
 
   let itemPriceLabel: UILabel = {
     let label = UILabel()
-    label.font = UIFont(name: "Menlo", size: 20)
+    label.font = UIFont(name: "Menlo", size: 18)
     label.numberOfLines = 0
     return label
   }()
@@ -50,7 +40,7 @@ final class ItemCell: UITableViewCell, ViewCodable {
   private let stackView: UIStackView = {
     let stackView = UIStackView()
     stackView.axis = .horizontal
-    stackView.alignment = .center
+    stackView.alignment = .firstBaseline
     stackView.distribution = .fill
     stackView.spacing = 16.0
     return stackView
@@ -72,17 +62,20 @@ final class ItemCell: UITableViewCell, ViewCodable {
     disposeBag = DisposeBag()
   }
 
-  func setUpViewHierarchy() {
-    itemQuantityContainerView.addSubview(itemQuantityStepper)
-    itemQuantityContainerView.addSubview(itemQuantityLabel)
+  func configure(with item: ItemViewModel) {
+    itemQuantityLabel.text = item.quantityX
+    itemNameLabel.text = item.name
+    itemPriceLabel.text = item.price
+  }
 
-    [itemQuantityContainerView, itemNameLabel, itemPriceLabel].forEach {
+}
+
+extension ItemCell: ViewCode {
+
+  func setUpViewHierarchy() {
+    [itemQuantityLabel, itemNameLabel, itemPriceLabel].forEach {
       stackView.addArrangedSubview($0)
     }
-
-//    [itemQuantityLabel, itemNameLabel, itemPriceLabel].forEach {
-//      stackView.addArrangedSubview($0)
-//    }
     containerView.addSubview(stackView)
     contentView.addSubview(containerView)
   }
@@ -95,12 +88,8 @@ final class ItemCell: UITableViewCell, ViewCodable {
       make.bottom.equalToSuperview().offset(-16)
     }
 
-    itemQuantityStepper.snp.makeConstraints { make in
-      make.edges.equalToSuperview()
-    }
-
     itemQuantityLabel.snp.makeConstraints { make in
-      make.edges.equalToSuperview()
+      make.width.greaterThanOrEqualTo(36)
     }
 
     stackView.snp.makeConstraints { make in
@@ -110,27 +99,7 @@ final class ItemCell: UITableViewCell, ViewCodable {
 
   func performAdditionalConfiguration() {
     itemQuantityLabel.setContentHuggingPriority(.required, for: .horizontal)
-    itemQuantityStepper.setContentCompressionResistancePriority(.required, for: .horizontal)
     itemPriceLabel.setContentHuggingPriority(.required, for: .horizontal)
-  }
-
-  func configure(with item: ItemViewModel, isEditMode: Observable<Bool>?) {
-//    itemQuantityStepper.value = Double(item._itemQuantity)
-    itemQuantityStepper.isHidden = true
-    itemQuantityLabel.text = item.itemQuantity
-    itemNameLabel.text = item.itemName
-    itemPriceLabel.text = item.itemPrice
-
-//    if let isEditMode = isEditMode {
-//      isEditMode
-//        .bind(to: itemQuantityLabel.rx.isHidden)
-//        .disposed(by: disposeBag)
-//
-//      isEditMode
-//        .map { !$0 }
-//        .bind(to: itemQuantityStepper.rx.isHidden)
-//        .disposed(by: disposeBag)
-//    }
   }
 
 }

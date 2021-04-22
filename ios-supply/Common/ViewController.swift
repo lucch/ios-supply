@@ -8,7 +8,7 @@
 import UIKit
 
 
-class Controller<ViewType: View, ViewModelType>: UIViewController {
+class ViewController<ViewType: View, ViewModelType>: UIViewController {
 
   let viewModel: ViewModelType!
 

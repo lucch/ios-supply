@@ -1,5 +1,5 @@
 //
-//  CartController.swift
+//  CartViewController.swift
 //  ios-supply
 //
 //  Created by Alexandre Lucchesi on 19/04/21.
@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 
 
-final class CartController: Controller<CartView, CartViewModel> {
+final class CartViewController: ViewController<CartView, CartViewModel> {
 
   private let disposeBag = DisposeBag()
 
@@ -33,8 +33,8 @@ final class CartController: Controller<CartView, CartViewModel> {
     viewModel.items
       .bind(to: tableViewRx.items(
               cellIdentifier: CartView.itemCellReuseIdentifier,
-              cellType: ItemCell.self)) { [weak self] _, item, cell in
-        cell.configure(with: item, isEditMode: self?.viewModel.isEditEnabled)
+              cellType: ItemCell.self)) { _, item, cell in
+        cell.configure(with: item)
       }
       .disposed(by: disposeBag)
 
@@ -75,25 +75,14 @@ final class CartController: Controller<CartView, CartViewModel> {
       .bind(to: priceLabel.text)
       .disposed(by: disposeBag)
 
-    // TODO: Move logic below to view model and present the alert from the coordinator. :)
     let checkoutButton = customView.checkoutButton.rx
     checkoutButton.tap
-      .subscribe { [weak self] _ in
-        guard let index = self?.viewModel.selectedItemIndex.value,
-              let item = try? self?.viewModel.items.value()[index] else {
-          return
-        }
-
-        let alertController =
-          EditItemAlertController.make(itemName: item.itemName) { quantity in
-            guard let quantity = quantity else { return }
-            self?.viewModel.updateQuantity(to: quantity, forItemAt: index)
-          }
-
-        self?.present(alertController, animated: true, completion: nil)
-      }
+      .subscribe(onNext: viewModel.editItem)
       .disposed(by: disposeBag)
+  }
 
+  deinit {
+    print("👻 deinit \(Self.self)")
   }
 
 }

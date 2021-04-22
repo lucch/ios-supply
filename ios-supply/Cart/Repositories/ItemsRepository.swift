@@ -1,5 +1,5 @@
 //
-//  CartRepository.swift
+//  ItemsRepository.swift
 //  ios-supply
 //
 //  Created by Alexandre Lucchesi on 21/04/21.
@@ -29,4 +29,8 @@ final class ItemsRepository: Repository {
        // 3. Do something with the `items`.
 //     })
 
+  deinit {
+    print("👻 deinit \(Self.self)")
+  }
+  
 }

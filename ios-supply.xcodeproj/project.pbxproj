@@ -14,16 +14,15 @@
 		F03F7C212628C63E00E85E8E /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = F03F7C202628C63E00E85E8E /* RxMoya */; };
 		F03F7C252628C6D400E85E8E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F03F7C242628C6D400E85E8E /* SnapKit */; };
 		F03F7C282628C70F00E85E8E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C272628C70F00E85E8E /* NetworkManager.swift */; };
-		F03F7C452628D8FD00E85E8E /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C442628D8FD00E85E8E /* ViewCodable.swift */; };
-		F03F7C4A2628DA8F00E85E8E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C492628DA8F00E85E8E /* View.swift */; };
-		F03F7C4F2628DBB100E85E8E /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C4E2628DBB100E85E8E /* Controller.swift */; };
+		F03F7C452628D8FD00E85E8E /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C442628D8FD00E85E8E /* ViewCode.swift */; };
+		F03F7C4F2628DBB100E85E8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03F7C4E2628DBB100E85E8E /* ViewController.swift */; };
 		F04132EE262CAAB70085705C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04132ED262CAAB70085705C /* Coordinator.swift */; };
 		F04132FF262CB30E0085705C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04132FE262CB30E0085705C /* AppCoordinator.swift */; };
 		F0413310262D20300085705C /* CartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041330F262D20300085705C /* CartCoordinator.swift */; };
 		F0413318262D20BA0085705C /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0413317262D20BA0085705C /* CartView.swift */; };
 		F041331B262D22660085705C /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041331A262D22660085705C /* ItemViewModel.swift */; };
 		F0413344262E09ED0085705C /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0413343262E09ED0085705C /* ItemCell.swift */; };
-		F08F06CE262E1C9200BD18AF /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08F06CD262E1C9200BD18AF /* CartController.swift */; };
+		F08F06CE262E1C9200BD18AF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08F06CD262E1C9200BD18AF /* CartViewController.swift */; };
 		F08F06D2262E1CB900BD18AF /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08F06D1262E1CB900BD18AF /* CartViewModel.swift */; };
 		F08F06D7262E220500BD18AF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F08F06D6262E220500BD18AF /* RxSwift */; };
 		F08F06DB262E220500BD18AF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F08F06DA262E220500BD18AF /* RxRelay */; };
@@ -31,7 +30,7 @@
 		F08F06DF262E220500BD18AF /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F08F06DE262E220500BD18AF /* RxBlocking */; };
 		F0AC98262630E89000DF1EA2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC98252630E89000DF1EA2 /* Item.swift */; };
 		F0AC98292630EDC300DF1EA2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC98282630EDC300DF1EA2 /* Repository.swift */; };
-		F0AC982B2630EE1700DF1EA2 /* CartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC982A2630EE1700DF1EA2 /* CartRepository.swift */; };
+		F0AC982B2630EE1700DF1EA2 /* ItemsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC982A2630EE1700DF1EA2 /* ItemsRepository.swift */; };
 		F0AC982E2631399500DF1EA2 /* EditItemAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC982D2631399500DF1EA2 /* EditItemAlertController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,20 +54,19 @@
 		F03F7C042628C41500E85E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F03F7C062628C41500E85E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F03F7C272628C70F00E85E8E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		F03F7C442628D8FD00E85E8E /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
-		F03F7C492628DA8F00E85E8E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		F03F7C4E2628DBB100E85E8E /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		F03F7C442628D8FD00E85E8E /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		F03F7C4E2628DBB100E85E8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F04132ED262CAAB70085705C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F04132FE262CB30E0085705C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F041330F262D20300085705C /* CartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCoordinator.swift; sourceTree = "<group>"; };
 		F0413317262D20BA0085705C /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		F041331A262D22660085705C /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		F0413343262E09ED0085705C /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
-		F08F06CD262E1C9200BD18AF /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
+		F08F06CD262E1C9200BD18AF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		F08F06D1262E1CB900BD18AF /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		F0AC98252630E89000DF1EA2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F0AC98282630EDC300DF1EA2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		F0AC982A2630EE1700DF1EA2 /* CartRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRepository.swift; sourceTree = "<group>"; };
+		F0AC982A2630EE1700DF1EA2 /* ItemsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsRepository.swift; sourceTree = "<group>"; };
 		F0AC982D2631399500DF1EA2 /* EditItemAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemAlertController.swift; sourceTree = "<group>"; };
 		F0CB48B4262E258B00AF9141 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -112,14 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				F08F06CB262E1C6300BD18AF /* Cart */,
-				F0413346262E0A1F0085705C /* Coordinators */,
-				F03F7C2A2628C71A00E85E8E /* Network */,
+				F0AC982F2631BC0E00DF1EA2 /* App */,
 				F03F7C9B2629C83A00E85E8E /* Common */,
-				F04132FE262CB30E0085705C /* AppCoordinator.swift */,
-				F03F7BF82628C41400E85E8E /* AppDelegate.swift */,
 				F03F7C012628C41500E85E8E /* Assets.xcassets */,
-				F03F7C032628C41500E85E8E /* LaunchScreen.storyboard */,
-				F03F7C062628C41500E85E8E /* Info.plist */,
 			);
 			path = "ios-supply";
 			sourceTree = "<group>";
@@ -136,9 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				F04132ED262CAAB70085705C /* Coordinator.swift */,
-				F03F7C442628D8FD00E85E8E /* ViewCodable.swift */,
-				F03F7C492628DA8F00E85E8E /* View.swift */,
-				F03F7C4E2628DBB100E85E8E /* Controller.swift */,
+				F03F7C442628D8FD00E85E8E /* ViewCode.swift */,
+				F03F7C4E2628DBB100E85E8E /* ViewController.swift */,
 				F0AC98282630EDC300DF1EA2 /* Repository.swift */,
 			);
 			path = Common;
@@ -166,20 +158,22 @@
 			children = (
 				F0413342262E09DB0085705C /* Views */,
 				F08F06D0262E1CA900BD18AF /* View Models */,
-				F08F06CC262E1C7700BD18AF /* Controllers */,
+				F08F06CC262E1C7700BD18AF /* View Controllers */,
 				F0AC98242630E84F00DF1EA2 /* Models */,
 				F0AC98272630EDA700DF1EA2 /* Repositories */,
+				F03F7C2A2628C71A00E85E8E /* Network */,
+				F0413346262E0A1F0085705C /* Coordinators */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
 		};
-		F08F06CC262E1C7700BD18AF /* Controllers */ = {
+		F08F06CC262E1C7700BD18AF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F08F06CD262E1C9200BD18AF /* CartController.swift */,
+				F08F06CD262E1C9200BD18AF /* CartViewController.swift */,
 				F0AC982D2631399500DF1EA2 /* EditItemAlertController.swift */,
 			);
-			path = Controllers;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		F08F06D0262E1CA900BD18AF /* View Models */ = {
@@ -202,9 +196,20 @@
 		F0AC98272630EDA700DF1EA2 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				F0AC982A2630EE1700DF1EA2 /* CartRepository.swift */,
+				F0AC982A2630EE1700DF1EA2 /* ItemsRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F0AC982F2631BC0E00DF1EA2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F04132FE262CB30E0085705C /* AppCoordinator.swift */,
+				F03F7BF82628C41400E85E8E /* AppDelegate.swift */,
+				F03F7C032628C41500E85E8E /* LaunchScreen.storyboard */,
+				F03F7C062628C41500E85E8E /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		F0CB48B3262E258B00AF9141 /* Frameworks */ = {
@@ -301,19 +306,18 @@
 			files = (
 				F04132EE262CAAB70085705C /* Coordinator.swift in Sources */,
 				F0413318262D20BA0085705C /* CartView.swift in Sources */,
-				F08F06CE262E1C9200BD18AF /* CartController.swift in Sources */,
-				F03F7C4A2628DA8F00E85E8E /* View.swift in Sources */,
+				F08F06CE262E1C9200BD18AF /* CartViewController.swift in Sources */,
 				F0AC982E2631399500DF1EA2 /* EditItemAlertController.swift in Sources */,
 				F041331B262D22660085705C /* ItemViewModel.swift in Sources */,
 				F0AC98262630E89000DF1EA2 /* Item.swift in Sources */,
 				F0413344262E09ED0085705C /* ItemCell.swift in Sources */,
-				F0AC982B2630EE1700DF1EA2 /* CartRepository.swift in Sources */,
-				F03F7C4F2628DBB100E85E8E /* Controller.swift in Sources */,
+				F0AC982B2630EE1700DF1EA2 /* ItemsRepository.swift in Sources */,
+				F03F7C4F2628DBB100E85E8E /* ViewController.swift in Sources */,
 				F0AC98292630EDC300DF1EA2 /* Repository.swift in Sources */,
 				F04132FF262CB30E0085705C /* AppCoordinator.swift in Sources */,
 				F0413310262D20300085705C /* CartCoordinator.swift in Sources */,
 				F03F7C282628C70F00E85E8E /* NetworkManager.swift in Sources */,
-				F03F7C452628D8FD00E85E8E /* ViewCodable.swift in Sources */,
+				F03F7C452628D8FD00E85E8E /* ViewCode.swift in Sources */,
 				F03F7BF92628C41400E85E8E /* AppDelegate.swift in Sources */,
 				F08F06D2262E1CB900BD18AF /* CartViewModel.swift in Sources */,
 			);
@@ -456,7 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U7PMPGVRD;
-				INFOPLIST_FILE = "ios-supply/Info.plist";
+				INFOPLIST_FILE = "ios-supply/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,7 +479,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U7PMPGVRD;
-				INFOPLIST_FILE = "ios-supply/Info.plist";
+				INFOPLIST_FILE = "ios-supply/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

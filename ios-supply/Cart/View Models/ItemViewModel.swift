@@ -10,20 +10,24 @@ import Foundation
 
 final class ItemViewModel {
 
-  var _itemQuantity: Int
+  var quantity: Int
 
-  var itemQuantity: String {
-    "\(_itemQuantity)x"
+  var name: String
+
+  var price: String
+
+  var quantityX: String {
+    "\(quantity)x"
   }
 
-  var itemName: String
-
-  var itemPrice: String
-
   init(_ item: Item) {
-    self._itemQuantity = item.quantity
-    self.itemName = item.name
-    self.itemPrice = String(format: "$%.2f", item.price)
+    self.quantity = item.quantity
+    self.name = item.name
+    self.price = String(format: "$%.2f", item.price)
+  }
+
+  deinit {
+    print("👻 deinit \(Self.self)")
   }
 
 }
