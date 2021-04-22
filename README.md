@@ -1,1 +1,56 @@
-# ios-supply
+# [WIP] Architecture Proposal
+
+This repository contains sample code implementing an MVVM-based architecture targetting projects that support iOS 12+.
+
+## Layers
+
+This section outlines the key aspects of each component in the proposed architecture.
+
+### Views
+
+* Only layer allowed to `import UIKit`.
+* Main objects are usually `UIView`s `UIViewController`s.
+* `UIView`s are created and configured in a separate class (view code is encouraged), decoupled from `UIViewController`.
+* `UIViewController`s has two main responsibilities: managing view lifecycle and setting up bindings between its view and view model:
+  * Traditionally, callback closures or delegates have been used for communication between view controllers and view models.
+  * This proposal brings [RxSwift](https://github.com/ReactiveX/RxSwift) to the mix.
+* `UIViewController`s hold strong references to their views and view models.
+
+### View Models
+
+* Should not `import UIKit`. Examples:
+  * If you need a `UIColor`, use an enum and convert it to the actual `UIColor` in the view layer.
+  * If you need a `UIImage`, use a `String` and load the actual `UIImage` in the view layer.
+* Act as a data source for the views:
+  * Fetch data from and/or update the model.
+  * Format data to be presented on the views.
+  * Notify the view of changes in the model.
+* Should not expose the model to the view.
+* Dependencies should be provided through dependency injection. Usually contain:
+  * A `weak` reference to the coordinator.
+  * References to repositories (data providers).
+
+### Coordinators
+
+* Responsible for navigation.
+* Only layer allowed to call `present`, `pushViewController`, etc.
+* Can be arranged in a tree-like structure for handling complex navigation setups.
+* Specially useful if you need to support multiple platforms (eg. iPhone and iPad).
+* Be careful with ARC.
+
+### Repositories
+
+* TBD
+
+### Network
+
+* TBD
+
+## Core Dependencies
+
+* [SnapKit](https://github.com/ReactiveX/RxSwift): for elegantly setting constraints in code.
+* [RxSwift](https://github.com/ReactiveX/RxSwift): for implementing reactive two-way data bindings.
+
+## Project Organization
+
+Files should be grouped first [by feature](https://www.swiftbysundell.com/articles/structuring-swift-code/#features) (eg. `Cart`, `Settings`) and then by function (eg. `Models`, `View Controllers`).
