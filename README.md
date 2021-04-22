@@ -62,7 +62,7 @@ This section outlines the key aspects of each component in the proposed architec
 ## Core Dependencies
 
 * [SnapKit](https://github.com/ReactiveX/RxSwift): for elegantly setting constraints in code.
-* [RxSwift](https://github.com/ReactiveX/RxSwift): for implementing reactive two-way data bindings.
+* [RxSwift](https://github.com/ReactiveX/RxSwift): for implementing composable and reactive two-way data bindings.
 
 ## Project Organization
 
