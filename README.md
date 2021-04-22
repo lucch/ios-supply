@@ -19,7 +19,6 @@ This section outlines the key aspects of each component in the proposed architec
   * View code is encouraged, but XIBs and Storyboards (without segues) are accepted.
 * `UIViewController`s has two main responsibilities: managing view lifecycle and setting up bindings between its view and view model:
   * Traditionally, callback closures or delegates have been used for communication between view controllers and view models. This proposal brings [RxSwift](https://github.com/ReactiveX/RxSwift) to the mix.
-* `UIViewController`s hold strong references to their views and view models.
 
 ### View Models
 
@@ -41,7 +40,6 @@ This section outlines the key aspects of each component in the proposed architec
 * Only layer allowed to call `present`, `pushViewController`, etc.
 * Can be arranged in a tree-like structure for handling complex navigation setups.
 * Specially useful if you need to support multiple platforms (eg. iPhone and iPad).
-* Be careful with ARC.
 
 ### Repositories
 
@@ -54,6 +52,12 @@ This section outlines the key aspects of each component in the proposed architec
 ### Testing
 
 * TBD
+
+## Memory Management
+
+* `UIViewController`s hold strong references to views and view models.
+* View models hold strong references to the model and weak references to coordinators.
+* Coordinators hold strong references to child coordinators.
 
 ## Core Dependencies
 
